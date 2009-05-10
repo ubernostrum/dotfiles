@@ -82,9 +82,9 @@
 (setq vc-svn-program "/opt/local/bin/svn")
 
 
-;;-------------------------------------------------------
-;; Random things and stuff I've picked up over the years.
-;;-------------------------------------------------------
+;;---------------
+;; Random things.
+;;---------------
 
 ;; Being able to use the kill ring in a read-only buffer is handy.
 (setq kill-read-only-ok 1)
