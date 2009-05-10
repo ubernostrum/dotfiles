@@ -1,0 +1,5 @@
+screen -t irssi 0 irssi # IRC
+screen -t emacs 1 emacs # Editor
+
+startup_message off     # Don't need a splash screen, thanks.
+vbell off               # Visual bell is full of annoy.
