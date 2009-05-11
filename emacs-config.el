@@ -1,4 +1,4 @@
-;;----------------------
+1;;----------------------
 ;; General config stuff.
 ;;----------------------
 
@@ -94,6 +94,9 @@
 
 ;; Yes, I sometimes work with large files. That's OK.
 (setq large-file-warning-threshold nil)
+
+;; 80-character lines.
+(setq fill-column 79)
 
 ;; More useful duplicate buffer name resolution.
 (setq uniquify-buffer-name-style 'reverse)
