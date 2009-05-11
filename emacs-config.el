@@ -2,7 +2,7 @@
 ;; General config stuff.
 ;;----------------------
 
-;; Syntax highilighting is good.
+;; Syntax highlighting is good.
 (global-font-lock-mode 1)
 
 ;; No scroll bar, menu bar, toolbar or splash screen.
