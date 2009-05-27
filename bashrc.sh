@@ -7,6 +7,9 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
 
+alias ljmail="/opt/local/bin/mutt -F ~/.mutt/configs/lj"
+alias blistmail="/opt/local/bin/mutt -F ~/.mutt/configs/blist"
+
 # Lots of path stuff because of all the random crap I have installed.
 export PATH=/opt/local/bin:/sw/bin:/usr/local/bin:$HOME/bin:$HOME/dev/django/svn/django/branches/releases/1.0.X/django/bin:$PATH
 export PYTHONPATH=$HOME/dev/python-local:$PYTHONPATH

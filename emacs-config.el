@@ -6,9 +6,9 @@
 (global-font-lock-mode 1)
 
 ;; No scroll bar, menu bar, toolbar or splash screen.
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode nil))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode nil))
+(if (fboundp 'menu-bar-mode) (menu-bar-mode nil))
 (setq inhibit-startup-message t)
 
 ;; Don't crap backup files all over the place.
@@ -95,12 +95,6 @@
 
 ;; 80-character lines.
 (setq fill-column 79)
-
-;; More useful duplicate buffer name resolution.
-(setq uniquify-buffer-name-style 'reverse)
-(setq uniquify-separator "/")
-(setq uniquify-after-kill-buffer-p t)
-(setq uniquify-ignore-buffers-re "^\\*")
 
 
 ;;-------------------------------------------------------
