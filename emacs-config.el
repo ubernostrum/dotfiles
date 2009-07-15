@@ -41,6 +41,8 @@
 (global-set-key "\M-g" 'goto-line)
 (global-set-key "\C-cs" 'shell)
 
+(global-set-key "\C-xc" 'comment-region)
+
 ;; For composing email from external clients.
 (global-set-key "\C-xy" 'server-edit)
 
