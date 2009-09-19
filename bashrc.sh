@@ -13,7 +13,7 @@ export CLICOLOR=1
 export LSCOLORS="ExGxcxdxbxegedabagacad"
 
 # Lots of path stuff because of all the random crap I have installed.
-export PATH=/opt/local/bin:/usr/local/bin:$HOME/bin:$HOME/dev/django/svn/django/trunk/django/bin:$PATH
+export PATH=/opt/local/bin:/usr/local/git/bin:/usr/local/bin:$HOME/bin:$HOME/dev/django/svn/django/trunk/django/bin:$PATH
 export PYTHONPATH=$HOME/dev/python-local:$PYTHONPATH
 
 # Hooray Emacs!
