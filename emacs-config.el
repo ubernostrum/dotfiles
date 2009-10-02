@@ -98,6 +98,10 @@
 ;; 80-character lines.
 (setq fill-column 79)
 
+;; More descriptive handling of duplicate buffer names.
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+
 
 ;;-------------------------------------------------------
 ;; And let Custom dump some font and color stuff in here.
