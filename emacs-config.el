@@ -68,11 +68,13 @@
 
 ;; Custom CSS mode.
 (autoload 'css-mode "css-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.css$'" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.css$" . css-mode))
 
 ;; reStructuredText mode.
-(load "rst")
-(add-hook 'text-mode-hook 'rst-text-mode-bindings)
+(require 'rst)
+(add-to-list 'auto-mode-alist '("\\.rst$" . rst-mode))
+(add-to-list 'auto-mode-alist '("\\.txt$" . rst-mode))
+;;(add-hook 'text-mode-hook 'rst-text-mode-bindings)
 (setq rst-level-face-base-light 0)
 
 ;; hg is my DVCS of choice.
@@ -114,3 +116,9 @@
   ;; If there is more than one, they won't work right.
  '(default ((t (:stipple nil :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 115 :width normal :family "andale"))))
  '(mode-line ((t (:background "white" :foreground "black")))))
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(rst-level-face-base-color "black"))
