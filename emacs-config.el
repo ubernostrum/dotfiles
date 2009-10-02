@@ -74,7 +74,6 @@
 (require 'rst)
 (add-to-list 'auto-mode-alist '("\\.rst$" . rst-mode))
 (add-to-list 'auto-mode-alist '("\\.txt$" . rst-mode))
-;;(add-hook 'text-mode-hook 'rst-text-mode-bindings)
 (setq rst-level-face-base-light 0)
 
 ;; hg is my DVCS of choice.
