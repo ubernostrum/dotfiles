@@ -75,6 +75,7 @@
 (add-to-list 'auto-mode-alist '("\\.rst$" . rst-mode))
 (add-to-list 'auto-mode-alist '("\\.txt$" . rst-mode))
 (setq rst-level-face-base-light 0)
+(add-hook 'rst-mode-hook 'rst-text-mode-bindings)
 
 ;; hg is my DVCS of choice.
 (load "mercurial")
