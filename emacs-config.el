@@ -70,6 +70,9 @@
 (autoload 'css-mode "css-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.css$" . css-mode))
 
+(autoload 'csharp-mode "csharp-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.cs$" . csharp-mode))
+
 ;; reStructuredText mode.
 (require 'rst)
 (add-to-list 'auto-mode-alist '("\\.rst$" . rst-mode))
