@@ -5,6 +5,9 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
 
+# I have multiple Pythons, but I want pydoc to give me docs for 2.6.
+alias pydoc='pydoc2.6'
+
 # Colored output from ls is nice, but the default color choices need
 # work for use on a dark/partially transparent background. Directories
 # stay blue but get bold, and symbolic links get bold cyan instead of
