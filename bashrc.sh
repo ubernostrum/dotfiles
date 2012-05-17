@@ -17,7 +17,7 @@ export CLICOLOR=1
 export LSCOLORS="ExGxcxdxbxegedabagacad"
 
 # Lots of path stuff because of all the random crap I have installed.
-export PATH=/usr/bin:/usr/local/bin:$HOME/bin:$HOME/dev/django/svn/django/trunk/django/bin:$HOME/dev/git/mozilla/git-tools:$PATH
+export PATH=/usr/bin:/usr/local/bin:$HOME/bin:$HOME/dev/git/django/django/bin:$HOME/dev/git/mozilla/git-tools:$PATH
 export PYTHONPATH=$HOME/dev/python-local:$PYTHONPATH
 
 # Hooray Emacs!
@@ -37,7 +37,7 @@ export WORKON_HOME=$HOME/dev/virtualenvs
 . $HOME/bin/virtualenvwrapper.sh
 
 # Some useful additional completion.
-. $HOME/dev/django/svn/django/trunk/extras/django_bash_completion
+. $HOME/dev/git/django/extras/django_bash_completion
 . $HOME/bin/hg_completion
 . /usr/local/git/contrib/completion/git-completion.bash
 
