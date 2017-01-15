@@ -4,6 +4,8 @@
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
+
+# See https://hub.github.com/
 alias git=hub
 
 # Colored output from ls is nice, but the default color choices need
