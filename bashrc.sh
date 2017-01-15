@@ -14,14 +14,14 @@ alias git=hub
 # stay blue but get bold, and symbolic links get bold cyan instead of
 # magenta.
 export CLICOLOR=1
-export LSCOLORS="ExGxcxdxbxegedabagacad"
+export LSCOLORS="excxcxdxbxegedabagacad"
 
 # Lots of path stuff because of all the random crap I have installed.
-export PATH=/usr/bin:/usr/local/bin:$HOME/bin:$HOME/dev/git/django/django/bin:$HOME/dev/git/mozilla/git-tools:$PATH
-export PYTHONPATH=$HOME/dev/python-local:$PYTHONPATH
+export PATH=$HOME/.pyenv/shims:/usr/local/bin:/usr/bin:$HOME/bin::$HOME/dev/git/thirdparty/arcanist/bin:$PATH
+#export PYTHONPATH=$HOME/dev/python-local:$PYTHONPATH
 
 # Hooray Emacs!
-export EDITOR=emacs
+export EDITOR=/usr/local/bin/emacsclient
 
 # Prompt is not as complicated as the format string would
 # suggest. This one does:
@@ -31,16 +31,20 @@ export EDITOR=emacs
 # with user/host in green and working directory cyan.
 export PS1="(\[\e[0;37m\]\A\[\e[0;37m\]) \[\e[0;32m\]\u@\h\[\e[0;37m\]:\[\e[0;36m\]\w\[\e[0;37m\] \$ "
 
-# Env variables and functions for virtualenvwrapper.
-export BUGZILLA_API=api-dev.bugzilla.mozilla.org
-export WORKON_HOME=$HOME/dev/virtualenvs
-. $HOME/bin/virtualenvwrapper.sh
+# Keep history clean.
+export HISTCONTROL=ignoreboth:erasedups
 
-# Some useful additional completion.
-. $HOME/dev/git/django/extras/django_bash_completion
-. $HOME/bin/hg_completion
+# Make GPG work.
+export GPG_TTY=$(tty)
+
+# Completion for hg and git.
 . /usr/local/git/contrib/completion/git-completion.bash
 
-# Rackspace management fun.
-. $HOME/.secrets
-. $HOME/bin/rackspace.sh
+# Heroku setup.
+. $HOME/.herokurc
+
+# AWS setup.
+. $HOME/.awsrc
+
+# Clover stuff.
+. $HOME/.cloverrc

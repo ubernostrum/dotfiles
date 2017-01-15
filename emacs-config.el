@@ -4,6 +4,13 @@
 ;;----------------------
 
 ;; Syntax highlighting is good.
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (global-font-lock-mode 1)
 
 ;; No scroll bar, menu bar, toolbar or splash screen.
@@ -44,7 +51,7 @@
 
 (global-set-key "\C-xc" 'comment-region)
 
-;; For composing email from external clients.
+;; For editing from external clients.
 (global-set-key "\C-xy" 'server-edit)
 
 ;; C-k should kill the newline as well.
@@ -61,16 +68,10 @@
 (add-to-list 'custom-theme-load-path "~/.elisp/emacs-color-theme-solarized")
 (load-theme 'solarized-dark t)
 
-;; Custom Python mode.
-(load "python-mode")
-
 ;; Custom CSS mode.
 (autoload 'css-mode "css-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.css$" . css-mode))
-
-;; C# mode.
-(autoload 'csharp-mode "csharp-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.cs$" . csharp-mode))
+(add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
 
 ;; reStructuredText mode.
 (require 'rst)
@@ -79,6 +80,8 @@
 (setq rst-level-face-base-light 0)
 (add-hook 'rst-mode-hook 'rst-text-mode-bindings)
 
+(require 'editorconfig)
+(editorconfig-mode 1)
 
 ;;---------------
 ;; Random things.
@@ -118,15 +121,18 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:stipple nil :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 115 :width normal :family "andale"))))
  '(mode-line ((t (:background "white" :foreground "black")))))
-;(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-; '(rst-level-face-base-color "black"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "a71be4e5e9e418025daea651f8a1628953abb7af505da5e556e95061b6a6e389" default))))
+ '(custom-safe-themes
+   (quote
+    ("1157a4055504672be1df1232bed784ba575c60ab44d8e6c7b3800ae76b42f8bd" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "a71be4e5e9e418025daea651f8a1628953abb7af505da5e556e95061b6a6e389" default)))
+ '(org-agenda-files (quote ("~/dev/org")))
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa" . "http://melpa.milkbox.net/packages/"))))
+ '(package-selected-packages (quote (python-mode rust-mode org fsharp-mode)))
+ '(rst-level-face-base-color "black"))
