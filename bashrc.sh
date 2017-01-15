@@ -16,8 +16,7 @@ export CLICOLOR=1
 export LSCOLORS="excxcxdxbxegedabagacad"
 
 # Lots of path stuff because of all the random crap I have installed.
-export PATH=$HOME/.pyenv/shims:/usr/local/bin:/usr/bin:$HOME/bin::$HOME/dev/git/thirdparty/arcanist/bin:$PATH
-#export PYTHONPATH=$HOME/dev/python-local:$PYTHONPATH
+export PATH=$HOME/.pyenv/shims:/usr/local/bin:/usr/bin:$HOME/bin:$PATH
 
 # Hooray Emacs!
 export EDITOR=/usr/local/bin/emacsclient
