@@ -80,6 +80,9 @@
 (setq rst-level-face-base-light 0)
 (add-hook 'rst-mode-hook 'rst-text-mode-bindings)
 
+(autoload 'csharp-mode "csharp-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.cs$" . csharp-mode))
+
 (require 'editorconfig)
 (editorconfig-mode 1)
 
@@ -133,6 +136,11 @@
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa" . "http://melpa.milkbox.net/packages/"))))
- '(package-selected-packages (quote (python-mode rust-mode org fsharp-mode)))
+     ("melpa" . "https://melpa.org/packages/")
+     ("melpa-stable" . "https://stable.melpa.org/packages/"))))
+ '(package-selected-packages
+   (quote
+    (markdown-mode tide typescript-mode python-mode rust-mode org fsharp-mode)))
  '(rst-level-face-base-color "black"))
+
+(package-initialize)

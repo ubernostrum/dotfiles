@@ -16,7 +16,7 @@ export CLICOLOR=1
 export LSCOLORS="excxcxdxbxegedabagacad"
 
 # Lots of path stuff because of all the random crap I have installed.
-export PATH=$HOME/.pyenv/shims:/usr/local/bin:/usr/bin:$HOME/bin:$PATH
+export PATH=$HOME/.pyenv/shims:$HOME/.cargo/bin:/usr/local/bin:/usr/bin:$HOME/bin:$PATH
 
 # Hooray Emacs!
 export EDITOR=/usr/local/bin/emacsclient
@@ -36,13 +36,12 @@ export HISTCONTROL=ignoreboth:erasedups
 export GPG_TTY=$(tty)
 
 # Completion for hg and git.
-. /usr/local/git/contrib/completion/git-completion.bash
+source /usr/local/git/contrib/completion/git-completion.bash
 
 # Heroku setup.
-. $HOME/.herokurc
+source $HOME/.herokurc
 
 # AWS setup.
-. $HOME/.awsrc
+source $HOME/.awsrc
 
-# Clover stuff.
-. $HOME/.cloverrc
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
